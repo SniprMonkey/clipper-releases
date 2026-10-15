@@ -17,8 +17,11 @@ A Windows desktop app that finds the best moments in Twitch VODs and turns them 
 - **Finds moments in Twitch VODs** from a link, without downloading the whole video: it streams the audio and fetches only the video parts it needs.
 - **Deadlock gameplay** (the first supported game): fights, kills, deaths, outplays, mid-boss and Rift fights, from the community Deadlock API's match data lined up with the VOD. While you play, it can record your own matches' live data for exact timing. Matches without data are checked by a gameplay vision model.
 - **Other games and Just Chatting:** moments from audio, chat and speech (laughter, shouting, chat activity, reactions).
-- **Ready clips:** 3–5 clips per hour of stream, 5–60 seconds each, with a 9:16 layout (camera and gameplay), captions and a suggested title. Keep, edit or discard each one; Keep exports the MP4.
-- **Captions:** speech recognition on your PC (whisper.cpp, on the graphics card or the CPU). The game's voice lines and sound effects are left out.
+- **Ready clips made for short-form:** 3–5 clips per hour of stream, 12–25 seconds each: they start just before the action and end right after the payoff, keeping your reaction. Each comes with a 9:16 layout (camera and gameplay), captions and a kind (Teammate, Fail, Reaction, Outplay, Team fight…). Keep, edit or discard each one; Keep makes the MP4.
+- **A hook on screen:** each clip gets a suggested line for its first seconds that tells viewers what to watch for. Edit it (the rules are checked as you type) or turn it off per clip.
+- **Ready to post:** text stays clear of what TikTok and Instagram cover (press A in the viewer to see their buttons over the clip), the audio is brought to the apps' loudness, and each clip has post texts with hashtags for Instagram, TikTok and YouTube Shorts, ready to copy.
+- **Results:** type in how your posted clips did. Compy Clips compares them by kind of clip, length, hook and posting time at the same age, and suggests changes once there's enough to go by. Nothing changes unless you apply it.
+- **Captions:** speech recognition on your PC (whisper.cpp, on the graphics card or the CPU), in the middle of the clip, a few words at a time. The game's voice lines and sound effects are left out.
 - **Editor:** a timeline with game segments and detected moments, trimming, a layout editor, caption styles and a transcript editor. Exports at 1080×1920 or 720×1280, 30 or 60 fps, with the graphics card's encoder.
 - **Channel watching:** checks your Twitch channel for new VODs and analyses them by itself; it can run in the tray.
 - **Learns your taste:** after about 20 Keep/Discard choices, a small model on your PC reorders the picks.
@@ -34,7 +37,7 @@ A Windows desktop app that finds the best moments in Twitch VODs and turns them 
 | Speech | whisper.cpp (Vulkan or CPU), Silero VAD |
 | Sound and vision | ONNX Runtime: CED audio tagging (laughter, shouting); a MobileNetV3 gameplay model trained in PyTorch |
 | Game data | The community Deadlock API; Deadlock's live match broadcasts, parsed with Haste (Rust) |
-| Ranking | Rule-based scoring plus a per-user logistic regression trained on Keep/Discard choices |
+| Ranking | Rule-based scoring and short-form rules (one JSON config), plus a per-user logistic regression trained on Keep/Discard choices |
 | Updates | Tauri updater (signed updates), NSIS installer |
 
 ## Install
@@ -47,7 +50,7 @@ Compy Clips updates itself from this page (it asks first). The source code is pr
 
 ## Status
 
-Version 0.1, in active development. Deadlock is the first game with gameplay detection.
+Version 0.1.3 (October 2026), in active development. Deadlock is the first game with gameplay detection.
 
 Planned:
 - Gameplay detection for League of Legends, Rocket League, Brawlhalla and Apex Legends, in that order
@@ -60,7 +63,7 @@ Compy Clips is made by one streamer with AI assistance: AI helped write most of 
 
 ## Privacy
 
-No account and no telemetry. Compy Clips only contacts Twitch (the videos and chat you analyse), the Deadlock API and Valve (match data, Steam profile pictures, the live broadcast of your own matches), GitHub (updates) and Hugging Face (speech models you choose to download). Your clips stay on your PC.
+No account and no telemetry. Compy Clips only contacts Twitch (the videos and chat you analyse), the Deadlock API and Valve (match data, Steam profile pictures, the live broadcast of your own matches), GitHub (updates) and Hugging Face (speech models you choose to download). Your clips and results stay on your PC.
 
 ## Licences
 

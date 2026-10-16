@@ -50,7 +50,7 @@ Compy Clips updates itself from this page (it asks first). The source code is pr
 
 ## Status
 
-Version 0.1.3 (October 2026), in active development. Deadlock is the first game with gameplay detection.
+Version 0.1.4 (October 2026), in active development. Deadlock is the first game with gameplay detection.
 
 Planned:
 - Gameplay detection for League of Legends, Rocket League, Brawlhalla and Apex Legends, in that order

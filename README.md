@@ -5,12 +5,12 @@ A Windows desktop app that finds the best moments in Twitch VODs and turns them 
 **Built by one streamer, using AI.**
 
 <p align="center">
-  <img src="images/demo.gif" width="480" alt="A kept clip playing in Compy Clips: the camera on top (blurred here), Deadlock gameplay below, captions burned in, with the clip's title, detected moments and a Share button next to it">
+  <img src="images/demo.gif" width="480" alt="A kept clip playing in Compy Clips' viewer: the camera on top (blurred here), Deadlock gameplay below, a yellow hook line popping in at the start, then captions in the middle; next to it the clip's kind, hook, post texts and Share">
 </p>
 
-![Ready clips: the best moments of a VOD, cut into captioned 9:16 clips with titles and detected moments](images/ready-clips.jpg)
+![Ready clips: three kept 9:16 clips, each with its yellow hook and captions in the middle, its kind (Outplay, Team fight, Fail), detected moments, post texts and Share](images/ready-clips.jpg)
 
-![The editor: the VOD with its game segments and detected moments on the timeline, a 9:16 preview and the suggested moments with their scores](images/editor.jpg)
+![The editor: the VOD with its detected moments on the timeline, a 9:16 preview, and the suggested moments with their scores and what happened in each](images/editor.jpg)
 
 ## What it does
 
